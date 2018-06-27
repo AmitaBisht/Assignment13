@@ -1,0 +1,67 @@
+#Question1
+
+try:
+    a=3
+    if a<4:
+        a=a/(a-3)
+        print(a)
+except ZeroDivisionError as message:
+    print('Exception:', message)
+    
+ #Question 2
+ 
+try:
+    l=[1,2,3]
+    print(l[3])
+except IndexError as message:
+    print('Exception:',message)
+ 
+ #Question3
+ An exception 
+NameError
+
+#Question4
+-5.0
+a/b result in 0
+
+#Question5
+
+#import error
+try:
+    from _mats import *
+except ImportError as message:
+    print("Exception",message)
+
+#Value error
+
+try:    
+    print int('abc')
+except ValueError as message:
+    print ('Exception:',message)
+    
+#Index error
+
+try:
+    l=[1,2,3]
+    print(l[3])
+except IndexError as message:
+    print('Exception:',message)
+
+#Question6
+class AgeTooSmallError(Exception):
+    pass
+
+while True:
+    try:
+        age=int(input("Enter Age"))
+        if (age<18):
+            print("entered age is less than 18")
+            raise AgeTooSmallError("Entered age is less than 18")
+        
+        else:
+            print("Enter age less than 18")
+    except NameError:
+        print(' please enter age')
+
+
+    
